@@ -25,6 +25,9 @@ RUN git clone --recursive https://github.com/metabrainz/musicbrainz-server.git m
     cd musicbrainz-server && \
     git checkout v-2018-08-14
 
+ADD https://dl.yarnpkg.com/debian/pubkey.gpg /tmp/yarn-pubkey.gpg
+RUN apt-key add /tmp/yarn-pubkey.gpg && rm /tmp/yarn-pubkey.gpg
+
 RUN cd musicbrainz-server && \
     cp docker/yarn_pubkey.txt /tmp && \
     cd /tmp && \
