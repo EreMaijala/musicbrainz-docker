@@ -1,4 +1,4 @@
-FROM airdock/oracle-jdk:jdk-8u74
+FROM openjdk:8-jre-stretch
 
 LABEL Author="Robert Kaye <rob@metabrainz.org>"
 
