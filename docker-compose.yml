@@ -46,7 +46,7 @@ services:
     build: search-dockerfile
     restart: unless-stopped
     ports:
-      - "8090:8080"
+      - "8080:8080"
     volumes:
       - indexdata:/home/search/indexdata
 
